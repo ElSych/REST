@@ -28,12 +28,12 @@ class Student(Resource):
             "surname": args["surname"]
         }
         students.append(student)
-        with open('stud_list.json', 'r') as jfr:
+       ''' with open('stud_list.json', 'r') as jfr:
             jf_file = json.load(jfr)
         with open('stud_list.json', 'w') as jf:
             jf_target = jf_file[0]
             jf_target.append(student)
-            json.dump(jf_file, jf, indent=2)
+            json.dump(jf_file, jf, indent=2)'''
         return student, 201
 
     def put(self, id):
